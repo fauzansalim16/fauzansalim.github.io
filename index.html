@@ -9,15 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_index.css" />
 
-    <title>My Portfolio | Fauzan Salim</title>
+    <!-- My logo -->
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+    <title>MyInvestment | Fauzan Salim</title>
   </head>
   <body id="home">
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top" style="background-color: rgb(232, 233, 243)">
       <div class="container">
-        <a class="navbar-brand" href="#">Fauzan Salim</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+          MyInvestment
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,7 +50,7 @@
     <section class="jumbotron text-center">
       <img src="img/fauzan1.jpg" alt="Fauzan Salim" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Fauzan Salim</h1>
-      <p class="lead">College Student</p>
+      <p class="lead">Investment Manager</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -58,7 +63,7 @@
     <!-- akhir jumbotron -->
 
     <!-- About -->
-    <section id="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
@@ -67,10 +72,18 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dicta dignissimos sed recusandae necessitatibus fugit sint excepturi ex nobis iste?</p>
+            <p class="text-container">
+              As an experienced investment manager, I have a proven track record of delivering strong returns for my clients. I am passionate about helping clients achieve their financial goals through strategic investment management. With
+              expertise in analyzing market trends and identifying lucrative investment opportunities, I am dedicated to providing personalized investment solutions tailored to each client's unique needs and risk tolerance. I believe in
+              managing portfolios with a disciplined approach, and risk management.
+            </p>
           </div>
           <div class="col-md-4">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus possimus aliquid quisquam dolorem hic officia voluptatum dolores recusandae vero. Explicabo?</p>
+            <p class="text-container">
+              I am skilled in navigating complex financial markets and making informed investment decisions. Transparency and building long-term relationships based on trust and integrity are my core values. I proactively stay updated with
+              the latest market developments and adjust investment strategies accordingly. My strong emphasis on capital preservation while seeking attractive growth opportunities sets me apart. With a client-centric approach, I am
+              committed to delivering exceptional service and exceeding expectations.
+            </p>
           </div>
         </div>
       </div>
@@ -89,32 +102,41 @@
       <div class="container">
         <div class="row text-center mb-5">
           <div class="col">
-            <h2>My Projects</h2>
+            <h2>Our Services</h2>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-4 mb-3">
-          <div class="card">
-            <img src="img/gambar1.jpg" class="card-img-top" class="img-fluid" alt="Project1" />
+          <div class="card" onclick="showNewPage()">
+            <img src="img/saham.jpg" class="card-img-top" class="img-fluid" alt="Project1" />
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">
+                Investing in stocks offers the potential for substantial long-term returns. Stocks provide opportunities to participate in the growth of successful companies and benefit from dividends. With proper research and
+                diversification, investing in stocks can help achieve financial goals.
+              </p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <div class="card">
-            <img src="img/gambar2.jpg" class="card-img-top" class="img-fluid" alt="Project2" />
+          <div class="card" onclick="showNewPage()">
+            <img src="img/crypto.jpg" class="card-img-top" class="img-fluid" alt="Project2" />
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">
+                Cryptocurrency investments have the potential for high volatility and significant returns. Investing in crypto allows access to innovative technologies and disruptive opportunities. With careful risk management and
+                understanding of the market, crypto investments can generate substantial profits.
+              </p>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <div class="card">
-            <img src="img/gambar3.jpg" class="card-img-top" class="img-fluid" alt="Project3" />
+          <div class="card" onclick="showNewPage()">
+            <img src="img/properties.jpg" class="card-img-top" class="img-fluid" alt="Project3" />
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">
+                Real estate investments offer a tangible asset with the potential for appreciation over time. Investing in real estate provides opportunities for passive income through rental properties. Diversifying a portfolio with real
+                estate can provide stability and act as a hedge against inflation.
+              </p>
             </div>
           </div>
         </div>
@@ -140,7 +162,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <form id="myForm" action="submit.html" method="GET">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" />
@@ -150,10 +172,10 @@
                 <input type="email" class="form-control" id="email" aria-describedby="email" />
               </div>
               <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
               </div>
-              <button type="Kirim" class="btn btn-secondary">Submit</button>
+              <input type="submit" value="Submit" class="btn btn-secondary" onclick="submitForm(event); resetForm()" />
             </form>
           </div>
         </div>
@@ -171,7 +193,7 @@
 
     <!--  Footer -->
     <footer class="bg-light text-center p-3">
-      <p>
+      <p class="test">
         Created with
         <!-- Bootstrap Icons -->
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -185,5 +207,7 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>

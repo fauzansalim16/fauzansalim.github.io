@@ -1,0 +1,42 @@
+/* Menggunakan tag html */
+section {
+  padding-top: 5rem;
+}
+/* MMenggunakan attribute class atau id */
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #f3f4f5;
+}
+#projects {
+  background-color: #f3f4f5;
+}
+/* Gabungan tag HTML dan Class maupun ID */
+div h5:hover {
+  color: blue;
+}
+/*  Pseudo-classes*/
+.test:hover {
+  color: hotpink;
+}
+
+/* Text rata kiri dan kanan */
+.text-container {
+  text-align: justify;
+}
+
+.text-container p {
+  display: inline-block;
+  text-align: left;
+}
+
+.text-container p.right-align {
+  text-align: right;
+}
+
+/* Hover pada card */
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  cursor: pointer;
+}
